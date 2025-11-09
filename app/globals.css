@@ -100,3 +100,235 @@ body {
   opacity: 0.1;
   pointer-events: none;
 }
+
+/* Custom gradient utilities */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Custom animations for Nepal theme */
+@keyframes nepali-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes cooking-steam {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-60px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes mountain-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px rgba(255, 206, 84, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(255, 206, 84, 0.6));
+  }
+}
+
+.nepali-float {
+  animation: nepali-float 3s ease-in-out infinite;
+}
+
+.cooking-steam {
+  animation: cooking-steam 2s ease-out infinite;
+}
+
+.mountain-glow {
+  animation: mountain-glow 4s ease-in-out infinite;
+}
+
+/* Story-based animations */
+@keyframes story-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes icon-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+@keyframes progress-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(251, 191, 36, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.8);
+  }
+}
+
+.story-reveal {
+  animation: story-reveal 0.8s ease-out forwards;
+}
+
+.icon-float {
+  animation: icon-float 3s ease-in-out infinite;
+}
+
+.progress-glow {
+  animation: progress-glow 2s ease-in-out infinite;
+}
+
+/* Custom backdrop blur for better readability */
+.backdrop-blur-custom {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Enhanced button hover effects */
+.btn-nepal {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-nepal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn-nepal:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Neo-Brutalism Animations */
+@keyframes brutal-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateX(5px) rotate(1deg);
+  }
+}
+
+@keyframes brutal-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@keyframes brutal-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes brutal-glow {
+  0%,
+  100% {
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  }
+  50% {
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1),
+      0 0 20px rgba(255, 255, 0, 0.5);
+  }
+}
+
+@keyframes countdown-flip {
+  0% {
+    transform: rotateY(0);
+  }
+  50% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+.brutal-shake {
+  animation: brutal-shake 0.5s ease-in-out infinite;
+}
+
+.brutal-bounce {
+  animation: brutal-bounce 1s ease-in-out infinite;
+}
+
+.brutal-spin {
+  animation: brutal-spin 3s linear infinite;
+}
+
+.brutal-glow {
+  animation: brutal-glow 2s ease-in-out infinite;
+}
+
+.countdown-flip {
+  animation: countdown-flip 1s ease-in-out infinite;
+}
+
+/* Image effects */
+.brutal-image-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.brutal-image-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.1) 2px,
+    rgba(0, 0, 0, 0.1) 4px
+  );
+  pointer-events: none;
+}
