@@ -90,7 +90,27 @@ export default function Home() {
     <div
       ref={containerRef}
       className='min-h-screen bg-lime-400 relative overflow-hidden'
+      style={{
+        backgroundImage: `
+          linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)
+        `,
+        backgroundSize: "40px 40px",
+      }}
     >
+      {/* Grid overlay pattern */}
+      <div className='absolute inset-0 opacity-20 pointer-events-none'>
+        <div
+          className='w-full h-full'
+          style={{
+            backgroundImage: `
+              radial-gradient(circle at 20px 20px, rgba(0,0,0,0.15) 2px, transparent 2px)
+            `,
+            backgroundSize: "40px 40px",
+          }}
+        />
+      </div>
+
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 pointer-events-none'>
         {[...Array(12)].map((_, i) => (
